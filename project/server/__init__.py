@@ -29,6 +29,7 @@ def index():
 @app.route('/fruits/')
 @app.route('/fruits/<fruit>')
 def get_fruits(fruit=None):
+    f = [f.update({'uri': url_for('get_fruits', fruit=f['name'])}) for f in fruits]
     _fruits = [f['name'] for f in fruits]
     if fruit:
         fruit = fruit.lower()
