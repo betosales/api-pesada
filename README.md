@@ -1,7 +1,7 @@
-# API Pesadona
+# API Pesada
 API que retorna dados fictícios da nossa cesta de frutas
 
-URL para teste https://api-pesadona.herokuapp.com
+URL para teste https://api-pesada.herokuapp.com/
 
 | METHOD | URL | RETORNO |
 |:------:| --- | ------- |
