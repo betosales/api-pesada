@@ -55,4 +55,9 @@ def get_fruits(fruit=None):
 def webhook_dummy():
     print(f'o header foi: {request.headers}')
     print(f'o retorno foi: {request.data}')
+    print(f'o form foi: {request.form}')
+
+
+    if request.content_type == 'application/x-www-form-urlencoded':
+        return jsonify(request.form)
     return request.data
