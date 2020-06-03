@@ -53,4 +53,5 @@ def get_fruits(fruit=None):
 
 @app.route('/webhook/dummy', methods=['POST'])
 def webhook_dummy():
+    print(request.data)
     return request.data
