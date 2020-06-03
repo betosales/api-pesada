@@ -2,7 +2,7 @@
 import os
 import random
 
-from flask import Flask, url_for
+from flask import Flask, url_for, request
 from flask_cors import CORS
 
 from flask import jsonify, make_response
@@ -50,3 +50,7 @@ def get_fruits(fruit=None):
             'fruits': fruits
         }
     return make_response(jsonify(response_object)), 200
+
+@app.route('/webhook/dummy', methods=['GET', 'POST'])
+def webhook_dummy():
+    return request.data
