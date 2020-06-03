@@ -51,6 +51,6 @@ def get_fruits(fruit=None):
         }
     return make_response(jsonify(response_object)), 200
 
-@app.route('/webhook/dummy', methods=['GET', 'POST'])
+@app.route('/webhook/dummy', methods=['POST'])
 def webhook_dummy():
     return request.data
